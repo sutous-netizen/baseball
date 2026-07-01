@@ -34,6 +34,13 @@ TEST_F(BaseballFixture, ReturnSolvedResultIfMatchedNumber1) {
 	EXPECT_EQ(2, result.strikes);
 	EXPECT_EQ(1, result.balls);
 }
+TEST_F(BaseballFixture, ReturnSolvedResultIfMatchedNumber2) {
+	GuessResult result = game.guess("137");
+
+	EXPECT_FALSE(result.solved);
+	EXPECT_EQ(1, result.strikes);
+	EXPECT_EQ(2, result.balls);
+}
 
 
 
